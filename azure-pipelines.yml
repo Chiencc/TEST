@@ -17,5 +17,5 @@ steps:
 
   - task: publishHtml@1
     inputs:
-    artifactName: 'productriskreport'
-    htmlFilePath: './productrisk.pdf'
+      artifactName: 'productriskreport'
+      htmlFilePath: './productrisk.pdf'
