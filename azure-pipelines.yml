@@ -9,6 +9,8 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 steps:
-  - script:
-    curl --header $(HEADER) --data $(DATA) $(API) -o productrisk.pdf
-    displayName:'curl222'
+  - script: 'curl --header $(HEADER) --data $(DATA) $(API) -o productrisk.pdf'
+    displayName: '1233'
+
+  - script: 'curl -o page.pdf http://www.linuxidc.com'
+    displayName: 'Get linux'
