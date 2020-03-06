@@ -8,16 +8,7 @@ trigger:
 
 pool:
   vmImage: 'ubuntu-latest'
-
-variables:
-	header: 'Content-Type:application/json'
-	productToken: 'c6337141b98d4f7793f791d8ba3160fbd865c7886b394c01b8da00b1f21bec68'
-	orgToken: '3ea1bfdc-6b9b-4661-97bb-0ed77dc4fbef'
-	userKey: '59740dc48e6142328d9f8ab13ea1a680659cb425dbe547dcaeb0e147437ee095'
-	api: 'https://saas.whitesourcesoftware.com/api/v1.3'
-  data: '$("userKey":'$(userKey)',"orgToken":'$(orgToken)',"requestType":"getProductRiskReport","productToken":'$(productToken)')'
-
 steps:
   - script:
-    curl --header $(header) --data $(data) $(api) -o productrisk.pdf
+    curl --header $(HEADER) --data $(DATA) $(API) -o productrisk.pdf
     displayName:'curl222'
