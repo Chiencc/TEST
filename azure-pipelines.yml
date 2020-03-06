@@ -12,5 +12,8 @@ steps:
   - script: 'curl --header $(HEADER) --data $(DATA) $(API) -o productrisk.pdf'
     displayName: '1233'
 
+  - script: 'ls -al'
+    displayName: 'ls'
+
   - script: 'curl -o page.pdf http://www.linuxidc.com'
     displayName: 'Get linux'
